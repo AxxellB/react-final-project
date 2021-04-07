@@ -1,5 +1,6 @@
 import HeaderItem from './HeaderItem/HeaderItem';
 import React from 'react';
+import { Link } from 'react-router-dom'
 import { Box, Heading, Flex, Text, Button } from '@chakra-ui/react';
 
 const Header = props => {
@@ -19,9 +20,11 @@ const Header = props => {
             {...props}
         >
             <Flex align="center" mr={5}>
-                <Heading as="h1" size="lg" letterSpacing={"-.1rem"}>
-                    GamerZ
-          </Heading>
+                <Link to="/">
+                    <Heading as="h1" size="lg" letterSpacing={"-.1rem"}>
+                        GamerZ
+                    </Heading>
+                </Link>
             </Flex>
 
             <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
@@ -42,21 +45,25 @@ const Header = props => {
                 flexGrow={1}
                 _hover={{ cursor: 'pointer' }}
             >
-                <HeaderItem>About</HeaderItem>
-                <HeaderItem>Contact Us</HeaderItem>
-                <HeaderItem>Rules</HeaderItem>
+                <HeaderItem link="about-us">About Us</HeaderItem>
+                <HeaderItem link="contact-us">Contact Us</HeaderItem>
+                <HeaderItem link="rules">Rules</HeaderItem>
             </Box>
 
             <Box
                 display={{ sm: show ? "block" : "none", md: "block" }}
                 mt={{ base: 4, md: 0 }}
             >
-                <Button bg="transparent" border="1px" borderRadius="15">
-                    Login
+                <Link to="/login">
+                    <Button bg="transparent" border="1px" borderRadius="15">
+                        Login
                 </Button>
-                <Button bg="teal.300" ml="10px" border="1px" borderRadius="15" _hover={{ color:"teal.300", bg:"white" }}>
-                    Register
+                </Link>
+                <Link to="/register">
+                    <Button bg="teal.300" ml="10px" border="1px" borderRadius="15" _hover={{ color: "teal.300", bg: "white" }}>
+                        Register
                 </Button>
+                </Link>
             </Box>
         </Flex>
     );

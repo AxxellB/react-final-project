@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Flex, HStack, Text } from '@chakra-ui/react';
 import { Facebook, Instagram, GitHub, Twitter } from 'react-feather';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	return (
@@ -18,10 +19,18 @@ const Footer = () => {
 				justify="center"
 				color="white"
 				_hover={{ cursor: 'pointer' }}>
-				<Text>Home</Text>
-				<Text>Rules</Text>
-				<Text>About</Text>
-				<Text>Contact Us</Text>
+                <Link to="/">
+				    <Text>Home</Text>
+                </Link>
+                <Link to="/rules">
+				    <Text>Rules</Text>
+                </Link>
+                <Link to="/about">
+				    <Text>About</Text>
+                </Link>
+                <Link to="/contact-us">
+				    <Text>Contact Us</Text>
+                </Link>
 			</HStack>
 			<HStack mb="10" spacing={50} justify="center" _hover={{cursor: "pointer"}}>
 				<Box color="white" fontSize="md">

@@ -1,4 +1,5 @@
 import { Button, Box, Heading } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 import PromotionalElementPictureOnRight from "./PromotionalElements/PromotionalElementPictureOnRight";
 import PromotionalElementPictureOnLeft from "./PromotionalElements/PromotionalElementPictureOnLeft";
@@ -28,9 +29,11 @@ const Promotional = () => {
             />
             <Box align="center" bg="#111217" color="white">
                 <Heading as="h2" fontSize="60" mb="20">Ready to join? It's free</Heading>
-                <Button align="center" fontSize="30" padding="8" bg="teal.400" borderRadius="40" _hover={{ color:"teal.300", bg:"white" }}>
-                    Join Now
-                </Button>
+                <Link to="/register">
+                    <Button align="center" fontSize="30" padding="8" bg="teal.400" borderRadius="40" _hover={{ color: "teal.300", bg: "white" }}>
+                        Join Now
+                    </Button>
+                </Link>
             </Box>
         </>
     )
