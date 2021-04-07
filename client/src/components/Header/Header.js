@@ -14,6 +14,7 @@ const Header = props => {
             wrap="wrap"
             padding="1.0rem"
             bg="gray.700"
+            fontWeight={600}
             color="white"
             {...props}
         >
@@ -39,6 +40,7 @@ const Header = props => {
                 width={{ sm: "full", md: "auto" }}
                 alignItems="center"
                 flexGrow={1}
+                _hover={{ cursor: 'pointer' }}
             >
                 <HeaderItem>About</HeaderItem>
                 <HeaderItem>Contact Us</HeaderItem>
@@ -49,10 +51,10 @@ const Header = props => {
                 display={{ sm: show ? "block" : "none", md: "block" }}
                 mt={{ base: 4, md: 0 }}
             >
-                <Button bg="transparent" border="1px">
+                <Button bg="transparent" border="1px" borderRadius="15">
                     Login
                 </Button>
-                <Button bg="teal.300" ml="10px"  border="1px">
+                <Button bg="teal.300" ml="10px" border="1px" borderRadius="15" _hover={{ color:"teal.300", bg:"white" }}>
                     Register
                 </Button>
             </Box>

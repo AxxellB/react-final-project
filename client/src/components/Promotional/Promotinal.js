@@ -26,9 +26,9 @@ const Promotional = () => {
                 content="Matchmaking queues open 24/7 for quick and fun games. The best and most active players win prizes every week."
                 imageName="esports.png"
             />
-            <Box align="center" bg="#111217" color="white" >
+            <Box align="center" bg="#111217" color="white">
                 <Heading as="h2" fontSize="60" mb="20">Ready to join? It's free</Heading>
-                <Button align="center" fontSize="30" padding="10" bg="teal.500" ml="10px" border="1px" borderRadius="40">
+                <Button align="center" fontSize="30" padding="8" bg="teal.400" borderRadius="40" _hover={{ color:"teal.300", bg:"white" }}>
                     Join Now
                 </Button>
             </Box>
