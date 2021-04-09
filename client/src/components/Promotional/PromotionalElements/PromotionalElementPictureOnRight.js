@@ -3,7 +3,8 @@ import { Box, Heading, Text, Image, Flex, Spacer } from '@chakra-ui/react';
 const PromotionalElementPictureOnRight = ({
     title,
     content,
-    imageName
+    imageName,
+    background
 }) => {
     const imageUrl = "./Promotional/" + imageName;
     return (

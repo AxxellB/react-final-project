@@ -7,7 +7,8 @@ import Header from './components/Header/Header';
 import HomePageAnimation from './components/HomePageAnimation/HomePageAnimation';
 import Promotional from './components/Promotional/Promotinal';
 import Register from './components/Register/Register';
-import Login from './components/Login/Login'
+import Login from './components/Login/Login';
+import About from './components/About/About';
 
 function App() {
     return (
@@ -19,9 +20,8 @@ function App() {
                     <Promotional></Promotional>
                     <Footer></Footer>
                 </Route>
-                <Route path="/about-us"></Route>
-                <Route path="/register" component={Register}>
-                </Route>
+                <Route path="/about-us" component={About}></Route>
+                <Route path="/register" component={Register}></Route>
                 <Route path="/login" component={Login}></Route>
                 <Route path="/logout"></Route>
                 <Route path="/contact-us"></Route>

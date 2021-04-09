@@ -1,0 +1,54 @@
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import AboutUsElement from '../About/AboutUsElement';
+import PageHeading from '../Partials/PageHeading';
+import Container from '../Partials/Container';
+import Alumni from '../Partials/Alumni';
+import { GiTrophyCup } from 'react-icons/gi';
+import { AiTwotoneRocket, AiFillCode } from 'react-icons/ai';
+import { Spacer } from '@chakra-ui/react';
+
+const About = () => {
+    return (
+        <>
+        <Header></Header>
+        <PageHeading title="About Us"/>
+        <AboutUsElement 
+        title="Our Mission" 
+        content1="We're working on a platform that offers online esports infrastructure to all the key stakeholders in the industry including players, 
+        organizers and game developers."
+        content2="We're a team of gamers, nerds, techies, athletes, creators and dreamers. A team made up of people who are the best at what they do. 
+        We have worked at companies like Google, Microsoft, ESL, Twitch, and Spotify. Some of us have been professional esports players but we all 
+        share a love for gaming. By merging both world-class technical and business expertise with years of esports experience, we've created a 
+        platform that enables the full potential of esports and competitive gaming."
+        subHeading1="What we do"
+        subHeading2="Who we are"
+        imageName="gamingCharacter.png">
+        </AboutUsElement>
+        <Container background="#F7F8FA" height={300}>
+            <Spacer/>
+            <Alumni title="2014" text="Founded" titleSize={70} textSize={24}></Alumni>
+            <Spacer/>
+            <Alumni title="40+" text="Employees" titleSize={70} textSize={24}></Alumni>
+            <Spacer/>
+            <Alumni title="$18M" text="Funding" titleSize={70} textSize={24}></Alumni>
+            <Spacer/>
+        </Container>
+        <Container background="white" height={500}>
+            <Spacer/>
+            <Alumni title="Play" text="Easy access to esports no matter your skill-level." icon={<GiTrophyCup/>} titleSize={35} textSize={18}></Alumni>
+            <Spacer/>
+            <Alumni title="Organize" text="Create competitions and monetize your community." icon={<AiTwotoneRocket/>} titleSize={35} textSize={18}></Alumni>
+            <Spacer/>
+            <Alumni title="Develop" text="Launch, scale and monetize esports games." icon={<AiFillCode/>} titleSize={35} textSize={20}></Alumni>
+            <Spacer/>
+        </Container>
+        <Container>
+            
+        </Container>
+        <Footer></Footer>
+        </>
+    );
+}
+
+export default About;
