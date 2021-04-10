@@ -4,8 +4,11 @@ import AboutUsElement from '../About/AboutUsElement';
 import PageHeading from '../Partials/PageHeading';
 import Container from '../Partials/Container';
 import Alumni from '../Partials/Alumni';
+import SectionHeading from '../Partials/SectionHeading'
 import { GiTrophyCup } from 'react-icons/gi';
-import { AiTwotoneRocket, AiFillCode } from 'react-icons/ai';
+import { AiTwotoneRocket, AiFillCode, AiOutlineMail } from 'react-icons/ai';
+import { BsPhone } from 'react-icons/bs';
+import { GoLocation } from 'react-icons/go';
 import { Spacer } from '@chakra-ui/react';
 
 const About = () => {
@@ -36,15 +39,21 @@ const About = () => {
         </Container>
         <Container background="white" height={500}>
             <Spacer/>
-            <Alumni title="Play" text="Easy access to esports no matter your skill-level." icon={<GiTrophyCup/>} titleSize={35} textSize={18}></Alumni>
+            <Alumni title="Play" text="Easy access to esports no matter your skill-level." icon={<GiTrophyCup/>} titleSize={35} textSize={20}></Alumni>
             <Spacer/>
-            <Alumni title="Organize" text="Create competitions and monetize your community." icon={<AiTwotoneRocket/>} titleSize={35} textSize={18}></Alumni>
+            <Alumni title="Organize" text="Create competitions and monetize your community." icon={<AiTwotoneRocket/>} titleSize={35} textSize={20}></Alumni>
             <Spacer/>
             <Alumni title="Develop" text="Launch, scale and monetize esports games." icon={<AiFillCode/>} titleSize={35} textSize={20}></Alumni>
             <Spacer/>
         </Container>
-        <Container>
-            
+        <Container background="#16171D" height={500}>
+            <Spacer/>
+            <Alumni title="Office" text="Söder Mälarstrand 71, 118 25 Stockholm, Sweden" color="white" icon={<GoLocation/>} titleSize={35} textSize={20}></Alumni>
+            <Spacer/>
+            <Alumni title="Inquiries" text="team@gamerz.com" color="white" icon={<AiOutlineMail/>} titleSize={35} textSize={20}></Alumni>
+            <Spacer/>
+            <Alumni title="Phone" text="+46(0)8 - 121 595 40" color="white" icon={<BsPhone/>} titleSize={35} textSize={20}></Alumni>
+            <Spacer/>
         </Container>
         <Footer></Footer>
         </>

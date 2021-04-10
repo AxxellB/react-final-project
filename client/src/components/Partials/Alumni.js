@@ -5,13 +5,14 @@ const Alumni = ({
     text,
     icon,
     titleSize,
-    textSize
+    textSize,
+    color
 }) => {
     return (
-        <Box padding={20}>
+        <Box padding={20} color={color}>
             <Box fontSize={35}>{icon}</Box>
             <Heading as="h3" fontSize={titleSize}>{title}</Heading>
-            <Text fontSize={textSize} fontWeight={100}>{text}</Text>
+            <Text fontSize={textSize} fontWeight={100} maxW={250}>{text}</Text>
         </Box>
     );
 }

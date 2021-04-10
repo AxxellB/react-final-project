@@ -1,10 +1,10 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Center } from '@chakra-ui/react';
 
 const Container = (props) => {
     return(
-        <Box bg={props.background} height={props.height} display="flex" align="center" justifyContent="center">
-            {props.children}
-        </Box>
+        <Center bg={props.background} height={props.height} align="center">
+                {props.children}
+        </Center>
     )
 }
 

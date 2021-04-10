@@ -5,8 +5,8 @@ const endpoints = {
     torunamentById: "data/tournaments/"
 }
 
-const api = new API("E7A8ACC5-59C8-A894-FF1B-4FBD052E7800",
-        "E09F1842-ED65-4438-80A6-789EB86F0893",
+const api = new API("C89AB65E-A71B-0B1B-FF0C-914A80F2EB00",
+        "827E6FD4-8DD0-400C-BC28-9E7F6D69C065",
         {},)
 
 export const login = api.login.bind(api);

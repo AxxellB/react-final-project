@@ -70,15 +70,15 @@ class API {
     
     async register(username, email, password){
         return this.post(this.endpoints.register, {
-                username,
                 email,
+                username,
                 password
             })
     }
     
-    async login(username, password){
+    async login(email, password){
         const result = await this.post(this.endpoints.login, {
-            login: username,
+            login: email,
             password
         })
 
