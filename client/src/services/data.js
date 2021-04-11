@@ -5,9 +5,7 @@ const endpoints = {
     torunamentById: "data/tournaments/"
 }
 
-const api = new API("C89AB65E-A71B-0B1B-FF0C-914A80F2EB00",
-        "827E6FD4-8DD0-400C-BC28-9E7F6D69C065",
-        {},)
+const api = new API({})
 
 export const login = api.login.bind(api);
 export const register = api.register.bind(api);
@@ -33,5 +31,13 @@ export async function editTournamentById(id, newtournament){
 //delete tournament by ID
 export async function deleteTournamentById(id){
     return api.delete(endpoints.tournamentsById + id)
+}
+
+export function checkRes(result){
+    if (result.hasOwnProperty("errorData")){
+        const error = new Error();
+        Object.assign(error, result);
+        throw error
+    }
 }
 

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { NotificationContainer, NotificationManager } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 import { Redirect } from 'react-router-dom';
-import { login } from '../../services/data';
+import { checkRes, login } from '../../services/data';
 
 
 
@@ -17,7 +17,8 @@ class Login extends Component {
 
         this.state = {
             email: "",
-            password: ""
+            password: "",
+            loggedIn: false,
         }
 
         this.onChangeHandler = this.onChangeHandler.bind(this);
@@ -28,7 +29,7 @@ class Login extends Component {
         this.setState({ [e.target.name]: e.target.value })
     }
 
-    onSubmitHandler(e) {
+    async onSubmitHandler(e) {
         e.preventDefault();
 
         if (this.state.email.length < 1) {
@@ -40,17 +41,21 @@ class Login extends Component {
         }
 
         try {
-            login(this.state.email, this.state.password);
-            <Redirect to="/"></Redirect>
+            const result = await login(this.state.email, this.state.password);
+            checkRes(result);
+            this.setState({loggedIn: true})
         }
-        catch (err) {
-            return NotificationManager.error("Wrong Username Or Password!");
+        catch (error) {
+            return NotificationManager.error(error);
         }
     }
 
 
 
     render() {
+        if (this.state.loggedIn === true){
+            return (<Redirect to="/" />)
+        }
         return (
             <>
                 <Header />

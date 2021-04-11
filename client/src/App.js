@@ -12,23 +12,15 @@ import Login from './components/Login/Login';
 import About from './components/About/About';
 import Logout from './components/Logout/Logout';
 import Tournaments from './components/Tournaments/Tournaments'
+import Rules from './components/Rules/Rules';
 
 class App extends Component {
     constructor(props){
         super(props)
         this.state = {
-            username: ''
         }
     }
 
-    componentDidMount(){
-        if(sessionStorage.getItem('userToken')){
-            const username = sessionStorage.getItem('username')
-            console.log(username);
-            this.setState({username: username})
-        }
-        console.log(this.state)
-    }
 
     render(){
     return (
@@ -44,6 +36,7 @@ class App extends Component {
                 <Route path="/register" component={Register}></Route>
                 <Route path="/login" component={Login}></Route>
                 <Route path="/logout" component={Logout}></Route>
+                <Route path="/rules" component={Rules}></Route>
                 <Route path="/tournaments" component={Tournaments}></Route>
             </Switch>
 

@@ -1,17 +1,15 @@
 class API {
-    constructor(appId, apiKey, endpoints){
-        this.appId = appId
-        this.apiKey = apiKey
+    constructor(endpoints){
         this.endpoints = Object.assign({
-            login: "users/login",
-            register: "users/register",
-            logout: "users/logout",
+            login: "login",
+            register: "register",
+            logout: "logout",
         }, endpoints)
 
     }
 
     host(endpoint){
-        return `https://api.backendless.com/${this.appId}/${this.apiKey}/${endpoint}`
+        return `http://localhost:5000/${endpoint}`
     }
 
     
@@ -70,19 +68,19 @@ class API {
     
     async register(username, email, password){
         return this.post(this.endpoints.register, {
-                email,
-                username,
-                password
+                "email": email,
+                "username": username,
+                "password": password
             })
     }
     
     async login(email, password){
         const result = await this.post(this.endpoints.login, {
-            login: email,
-            password
+            "email": email,
+            "password": password
         })
 
-        sessionStorage.setItem("userToken", result["user-token"]);
+        sessionStorage.setItem("userToken", result["accessToken"]);
         sessionStorage.setItem("username", result.username);
         sessionStorage.setItem("userId", result.objectId);
 
@@ -91,7 +89,7 @@ class API {
     
     async logout(){
         const result = await this.get(this.endpoints.logout);
-        sessionStorage.removeItem("userToken");
+        sessionStorage.removeItem("accessToken");
         sessionStorage.removeItem("email");
         sessionStorage.removeItem("userId");
         

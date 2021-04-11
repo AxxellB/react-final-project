@@ -1,12 +1,140 @@
 {
-    "tournaments":[
-        {"id": 1, "title":"Epic Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"},
-        {"id": 2, "title":"Lol Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"},
-        {"id": 3, "title":"Epic Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"},
-        {"id": 4, "title":"Lol Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"},
-        {"id": 5, "title":"Epic Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"},
-        {"id": 6, "title":"Lol Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"},
-        {"id": 7, "title":"Epic Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"},
-        {"id": 8, "title":"Lol Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"}
-    ]
+  "tournaments": [
+    {
+      "id": 1,
+      "title": "Epic Tornament",
+      "date": "25.04",
+      "image": "lol",
+      "time": "16:00",
+      "server": "EUNE",
+      "format": "1V1",
+      "slots": "32"
+    },
+    {
+      "id": 2,
+      "title": "Lol Tornament",
+      "date": "25.04",
+      "image": "lol",
+      "time": "16:00",
+      "server": "EUNE",
+      "format": "1V1",
+      "slots": "32"
+    },
+    {
+      "id": 3,
+      "title": "Epic Tornament",
+      "date": "25.04",
+      "image": "lol",
+      "time": "16:00",
+      "server": "EUNE",
+      "format": "1V1",
+      "slots": "32"
+    },
+    {
+      "id": 4,
+      "title": "Lol Tornament",
+      "date": "25.04",
+      "image": "lol",
+      "time": "16:00",
+      "server": "EUNE",
+      "format": "1V1",
+      "slots": "32"
+    },
+    {
+      "id": 5,
+      "title": "Epic Tornament",
+      "date": "25.04",
+      "image": "lol",
+      "time": "16:00",
+      "server": "EUNE",
+      "format": "1V1",
+      "slots": "32"
+    },
+    {
+      "id": 6,
+      "title": "Lol Tornament",
+      "date": "25.04",
+      "image": "lol",
+      "time": "16:00",
+      "server": "EUNE",
+      "format": "1V1",
+      "slots": "32"
+    },
+    {
+      "id": 7,
+      "title": "Epic Tornament",
+      "date": "25.04",
+      "image": "lol",
+      "time": "16:00",
+      "server": "EUNE",
+      "format": "1V1",
+      "slots": "32"
+    },
+    {
+      "id": 8,
+      "title": "Lol Tornament",
+      "date": "25.04",
+      "image": "lol",
+      "time": "16:00",
+      "server": "EUNE",
+      "format": "1V1",
+      "slots": "32"
+    }
+  ],
+  "users": [
+    {
+      "email": "angata10@gmail.com",
+      "password": "$2a$10$HEkQ8CaqmMb6kSQCBbhdoOHx5dPJVyoqCvIqYmmcUs7Fmyr5zKM1q",
+      "username": "Axxell10",
+      "id": 1
+    },
+    {
+      "email": "axxellblaze@gmail.com",
+      "password": "$2a$10$2QZ2WduGDFrbgIKUE0iGZeGFvYSEcaQ/hZPdT2fNkTkq0kCSMl9om",
+      "username": "angata10",
+      "id": 2
+    },
+    {
+      "email": "angata5@gmail.com",
+      "password": "$2a$10$VA5zCGixjHMj9ZIRdDJ2IO519dXgFjwNF6aeMrqZ.67I8eBh2.x0q",
+      "username": "angata5",
+      "id": 3
+    },
+    {
+      "email": "angata1@gmail.com",
+      "password": "$2a$10$MhBywQVAHhzu0JiDcTJ7uuw.tO4uhKs2vGfIZcKsOGtVfCRfDZJy6",
+      "username": "angata1",
+      "id": 4
+    },
+    {
+      "email": "angata100@gmail.com",
+      "password": "$2a$10$tRELsRIxUq61YD2OazResehn0swoUWhn1romL6Sdadj2Vdy0aGSxi",
+      "username": "angata100",
+      "id": 5
+    },
+    {
+      "email": "angata101@gmail.com",
+      "password": "$2a$10$1eyw2jZGyTcjAG04UGW1oOZROCk6ViCNsXE3e07eqSL1k5f/7dj0S",
+      "username": "angata101",
+      "id": 6
+    },
+    {
+      "email": "angata102@gmail.com",
+      "password": "$2a$10$QCGsUokhEUfDzuat6yK9eeAOOcPU9USsSZtMdAOetgERQT2dv7U72",
+      "username": "angata102",
+      "id": 7
+    },
+    {
+      "email": "angata105@gmail.com",
+      "password": "$2a$10$GHSSJgf2CIGo5Z8H.MJfKO/RtBOsOdft7C03tMXY12rMxmle2n5Bu",
+      "username": "angata105",
+      "id": 8
+    },
+    {
+      "email": "angata110@gmail.com",
+      "password": "$2a$10$/pT7KFEFM4WwjgmJic.ub.RIeMxqW.m11y.7Hi8UYolykeDuh12xW",
+      "username": "angata110",
+      "id": 9
+    }
+  ]
 }

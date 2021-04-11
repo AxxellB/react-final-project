@@ -5,11 +5,12 @@ import About from '../About/About'
 import { Component } from 'react';
 import { Box, Text, Input, FormControl, Button, Heading } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import { login, register } from '../../services/data';
+import { login, register, checkRes } from '../../services/data';
 import { nameValidation, emailValidation, passwordValidation, passwordMatchValidation } from '../../validations/validations';
 import { NotificationContainer, NotificationManager } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 import { Redirect } from 'react-router-dom';
+
 
 class Register extends Component {
     constructor(props) {
@@ -20,14 +21,15 @@ class Register extends Component {
             email: '',
             password: '',
             confirmPassword: '',
-            redirect: '/',
+            registered: false
         }
 
         this.onChangeHandler = this.onChangeHandler.bind(this);
         this.onSubmitHandler = this.onSubmitHandler.bind(this);
     }
 
-    onSubmitHandler(e) {
+
+    async onSubmitHandler(e) {
         e.preventDefault();
 
         if (nameValidation('Username', this.state.username)) {
@@ -46,15 +48,17 @@ class Register extends Component {
             return NotificationManager.error(passwordMatchValidation(this.state.password, this.state.confirmPassword))
         }
 
-        if (register(this.state.username, this.state.email, this.state.password)) {
+        try{ 
+            const result = await register(this.state.username, this.state.email, this.state.password);
+            checkRes(result);
             NotificationManager.success("Registration was successfull");
+            this.setState({registered: true})
+        }
+        catch( error ) {
+            NotificationManager.error(error);
         }
 
-        login(this.state.email, this.state.password);
-        
-        if (this.state.redirect){
-           return <Redirect to={About}></Redirect>
-        }
+    
     }
 
     onChangeHandler(e) {
@@ -62,6 +66,9 @@ class Register extends Component {
     }
 
     render() {
+        if (this.state.registered === true){
+            return <Redirect to="/login" />
+        }
         return (<>
             <Header />
             <NotificationContainer />
