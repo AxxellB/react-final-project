@@ -105,7 +105,6 @@ const Header = props => {
             >
                 <HeaderItem link="tournaments">Tournaments</HeaderItem>
                 <HeaderItem link="about-us">About Us</HeaderItem>
-                <HeaderItem link="contact-us">Contact Us</HeaderItem>
                 <HeaderItem link="rules">Rules</HeaderItem>
             </Box>             
             <Box

@@ -1,0 +1,12 @@
+{
+    "tournaments":[
+        {"id": 1, "title":"Epic Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"},
+        {"id": 2, "title":"Lol Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"},
+        {"id": 3, "title":"Epic Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"},
+        {"id": 4, "title":"Lol Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"},
+        {"id": 5, "title":"Epic Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"},
+        {"id": 6, "title":"Lol Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"},
+        {"id": 7, "title":"Epic Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"},
+        {"id": 8, "title":"Lol Tornament", "date": "25.04", "image":"lol", "time": "16:00", "server":"EUNE", "format":"1V1", "slots":"32"}
+    ]
+}
